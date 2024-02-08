@@ -1,10 +1,11 @@
 import React from 'react'
-import './Home.css'
+import './Skills.css'
 import imag from "../../assets/Image1.png"
 
-const Home = () => {
+
+const Skills = () => {
   return (
-    <section id='home'>
+    <section id='skills'>
       <img src={imag} alt="Picture" className='imag'/>
       
         <div className='homeContent'>
@@ -20,8 +21,7 @@ const Home = () => {
         </div>
         
     </section>
-  
-  );
+  )
 }
 
-export default Home;
+export default Skills
