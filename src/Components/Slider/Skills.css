@@ -1,16 +1,26 @@
-#skills{
-    overflow: hidden;
-    width: 100vw;
+   
+.skills{
+    width: 200px;
+    height: 200px;
+    background: #000000;
+    border-radius: 50%;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    background: #534666;
-    padding: 15px 7%;
-    
+    flex-direction: column;
+    gap: 1rem;
 }
 .skillTopic{
     text-align: center;
     color: aliceblue;
     align-items: center;
     top: 50px;
+    gap:10px;
+    font-size: 20px;
+}
+
+.skills img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
 }

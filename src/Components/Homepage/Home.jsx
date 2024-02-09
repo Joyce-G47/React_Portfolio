@@ -5,8 +5,10 @@ import imag from "../../assets/Image1.png"
 const Home = () => {
   return (
     <section id='home'>
-      <img src={imag} alt="Picture" className='imag'/>
-      
+      <div className='homeContainer'>
+        <img src={imag} alt="Picture" className='imag'/>
+      </div>
+
         <div className='homeContent'>
             <span className='nameTitle'>Sibongile Gumbi</span>
             <span><br/>Software Developer</span>
