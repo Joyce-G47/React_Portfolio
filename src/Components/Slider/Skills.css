@@ -1,0 +1,16 @@
+#skills{
+    overflow: hidden;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #534666;
+    padding: 15px 7%;
+    
+}
+.skillTopic{
+    text-align: center;
+    color: aliceblue;
+    align-items: center;
+    top: 50px;
+}
