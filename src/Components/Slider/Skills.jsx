@@ -9,14 +9,24 @@ import python from "../../assets/Group 103.png"
 const Skills = () => {
   return (
     <section id='skills'>
-        <div className='skillTopic'>
-            <h1>Skills</h1>
+      <span className='skillsTopic'>My Skills</span>
+      <div className='skillBars'>
+        <div className='skillsBar'>
+          <img src={html} alt='Group 99' className='html'/>
         </div>
 
-      <img src={html} alt='Group 99' className='html'/>
-      <img src={css} alt='Group 102' className='css'/>
-      <img src={javascript} alt='Group 100' className='javascript'/>
-      <img src={python} alt='Group 103' className='python'/>
+        <div>
+          <img src={css} alt='Group 102' className='css'/>
+        </div>
+        
+        <div>
+          <img src={javascript} alt='Group 100' className='javascript'/>
+        </div>
+
+        <div>
+          <img src={python} alt='Group 103' className='python'/>
+        </div>
+      </div>
         
     </section>
   )

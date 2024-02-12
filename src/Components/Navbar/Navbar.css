@@ -5,6 +5,8 @@
     justify-content: space-between;
     background: #534666;
     padding: 15px 7%;
+    position: fixed;
+    z-index: 1;
     
 }
 

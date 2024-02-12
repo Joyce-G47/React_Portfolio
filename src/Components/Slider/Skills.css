@@ -1,26 +1,90 @@
    
-.skills{
-    width: 200px;
-    height: 200px;
-    background: #000000;
-    border-radius: 50%;
-    display: flex;
+#skills {
+    overflow: hidden;
+    width: 100vw;
+    max-width: 75rem;
+    display: inline;
+    margin: 0 auto;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    gap: 1rem;
-}
-.skillTopic{
     text-align: center;
-    color: aliceblue;
-    align-items: center;
-    top: 50px;
-    gap:10px;
-    font-size: 20px;
+    
+
+}
+.skillsTopic{
+    font-size: large;
+    font-weight: bold;
+    margin: 40rem;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    gap: 2rem;
+}
+.skillsBars{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    gap: 2rem;
+    display: inline;
+
 }
 
-.skills img{
+
+/*.skills img{
     width: 20px;
-    height: 20px;
+    height: 50px;
     border-radius: 50%;
+    display: inline;
+    margin: 1rem;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    background: rgb(50,50,50);
 }
+/*.html{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    gap: 2rem;
+    align-items: center;
+    display: inline;
+
+
+}
+
+.html:hover{
+    background: #000000;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #000000;
+
+}
+.css{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    gap: 2rem;
+
+
+}
+
+.javascript{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    gap: 2rem;
+
+}
+
+
+.python{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+}
+
+
+
