@@ -1,35 +1,52 @@
-import React from 'react'
-import './Skills.css'
-import html from "../../assets/Group 99.png"
-import css from "../../assets/Group 102.png"
-import javascript from "../../assets/Group 100.png"
-import python from "../../assets/Group 103.png"
+import React from 'react';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 
-const Skills = () => {
+function Skills() {
   return (
-    <section id='skills'>
-      <span className='skillsTopic'>My Skills</span>
-      <div className='skillBars'>
-        <div className='skillsBar'>
-          <img src={html} alt='Group 99' className='html'/>
-        </div>
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="../../assets/Group 99.png"/>
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
 
-        <div>
-          <img src={css} alt='Group 102' className='css'/>
-        </div>
-        
-        <div>
-          <img src={javascript} alt='Group 100' className='javascript'/>
-        </div>
+      <Card.Img variant="top" src="../../assets.Group 102.png"/>
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
 
-        <div>
-          <img src={python} alt='Group 103' className='python'/>
-        </div>
-      </div>
-        
-    </section>
-  )
+      <Card.Img variant="top" src="Group 99.png/100px180" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+
+      <Card.Img variant="top" src="Group 99.png/100px180" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+  );
 }
 
-export default Skills
+export default Skills;

@@ -4,7 +4,7 @@ const Projects = () => {
   return (
     <section>
     <div>
-      
+      My Projects
     </div>
 
     </section>

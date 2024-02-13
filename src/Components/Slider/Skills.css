@@ -1,5 +1,5 @@
    
-#skills {
+/*#skills {
     overflow: hidden;
     width: 100vw;
     max-width: 75rem;
@@ -84,6 +84,22 @@
     height: 200px;
     border-radius: 50%;
 
+}*/
+
+/*#skills {
+    overflow: hidden;
+    background-color:white;
+    width: 3.4;
+    margin: auto;
+
+
+}
+.skillsTopic{
+
+}
+
+.skillsBars{
+    margin-top: 20;
 }
 
 
