@@ -11,9 +11,9 @@ const Home = () => {
       </div>
 
       <div className='homeContent'>
-        <span className='nameTitle'>Sibongile Gumbi</span>
+        <span className='nameTitle'>Sibongile <span className='orangeText'>Gumbi</span></span>
         <span className='position'>Software Developer</span>
-        <button className='btn'>Hire Me</button>
+        <button className='btn' style={{ backgroundColor: 'orange', color: 'white' }} >Hire Me</button>
         <p className='paraInfo'>Hi there, my name is Sibongile and I am a Software Developer. 
             I create cool web applications! I've learned how to use languages like HTML, CSS, Java, Python, and JavaScript.
              This job isn't just a regular job;

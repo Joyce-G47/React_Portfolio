@@ -13,11 +13,11 @@ import { Container, Row, Col,} from 'react-bootstrap';
 
 function Skills() {
   return (
-    <Container className='My Skills'>
-      <h1 className='text-center white-bold'>My Skills</h1>
+    <Container className='My Skills' style={{ paddingTop: '100px', paddingBottom: '100px' }}>
+      <h1 className='text-center text-black text-bold margin-100rem font-size-10rem' style={{ marginBottom: '30px'}}>My Skills</h1>
       <Row>
         <Col>
-          <Card style={{ width: '17rem' }}>
+          <Card style={{ width: '17rem', border: '2px solid #534666'}}>
             <Card.Img variant="top" src={imag} style={{ width: '150px', height: '150px' }}  className="mx-auto d-block"/>
             <Card.Body>
               <Card.Title className="text-center">Html</Card.Title>
@@ -31,7 +31,7 @@ function Skills() {
         </Col>
 
         <Col>
-          <Card style={{ width: '17rem' }}>
+          <Card style={{ width: '17rem', border: '2px solid #534666' }}>
             <Card.Img variant="top" src={Group102} style={{ width: '150px', height: '150px' }}  className="mx-auto d-block"/>
             <Card.Body>
               <Card.Title className="text-center">CSS</Card.Title>
@@ -45,7 +45,7 @@ function Skills() {
         </Col>
 
         <Col>
-          <Card style={{ width: '17rem' }}>
+          <Card style={{ width: '17rem', border: '2px solid #534666' }}>
             <Card.Img variant="top" src={Group100} style={{ width: '150px', height: '150px' }}  className="mx-auto d-block"/>
             <Card.Body>
               <Card.Title className="text-center">Javascript</Card.Title>
@@ -59,7 +59,7 @@ function Skills() {
         </Col>
 
         <Col>
-          <Card style={{ width: '17rem' }}>
+          <Card style={{ width: '17rem', border: '2px solid #534666' }}>
             <Card.Img variant="top" src={Group103} style={{ width: '150px', height: '150px' }}  className="mx-auto d-block"/>
             <Card.Body>
               <Card.Title className="text-center">Python</Card.Title>

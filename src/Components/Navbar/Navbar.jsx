@@ -1,10 +1,12 @@
 import React from 'react'
 import './Navbar.css'
+import Logo from '../../assets/Logo .png'
 
 const Navbar = () => {
   return (
+    
     <div className='navbar'>
-      <h1>S.Gumbi</h1>
+      <img src={Logo} alt="logo" style={{ width: '80px', height: '80px', marginLeft: '100px' }} />
 
       <ul>
         <li>Home</li>
@@ -12,6 +14,7 @@ const Navbar = () => {
         <li>Projects</li>
         <li>Contact</li>
       </ul>
+      
     </div>
   )
 }
