@@ -2,6 +2,7 @@ import React from 'react'
 import './Navbar.css'
 import Logo from '../../assets/Logo .png'
 
+
 const Navbar = () => {
   return (
     
