@@ -10,7 +10,7 @@ import Rectangle59a from '../../assets/Rectangle 59a.png';
 
 function Projects() {
   return (
-    <Carousel className='My projects'>
+    <Carousel className='My projects' style={{ paddingTop: '100px', paddingBottom: '100px' }}>
         <h1 className='text-center text-black text-bold margin-100rem font-size-10rem'>My Projects</h1>
       <Carousel.Item>
       <img className="d-block w-20" style={{ maxWidth: '600px', margin: 'auto' }} src={Group50a} alt="First slide"/>
