@@ -1,7 +1,7 @@
 import './ContactForm.scss'
 import React from 'react'
 
-function ContactForm () {
+function Contact () {
     const handleSubmit = () => {
 
     }
@@ -10,8 +10,9 @@ function ContactForm () {
         
     }
   return (
-    <section className="contact-section">
-        <div className="container">
+    <section id='Contact' className="contact-section">
+        <div className="container1">
+            
             <div className="col-md-10">
                 <div className="wrapper">
                     <div className='row no gutters'>
@@ -125,6 +126,6 @@ function ContactForm () {
   )
 }
 
-export default ContactForm
+export default Contact
 
 

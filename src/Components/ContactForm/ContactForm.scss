@@ -1,26 +1,23 @@
 .contact-section {
   padding: 7em 0;
+  display: flex;
 }
 
 .wrapper {
-  .info-wrap,
-  .contact-wrap {
-    display: inline-block;
-    width: 48%; /* Adjust as needed */
-    vertical-align: top; /* Align them at the top */
-    margin-right: 2%; /* Add some spacing between the two sections */
-  }
+  display: flex;
+}
 
-  .info-wrap {
-    background: linear-gradient(135deg, rgba(127, 39, 156, 1) 0%, rgba(46, 39, 157, 1) 100%);
-    color: #fff;
-    padding: 20px;
-  }
+.info-wrap {
+  flex: 2;
+  background: linear-gradient(135deg, rgba(127, 39, 156, 1) 0%, rgba(46, 39, 157, 1) 100%);
+  color: #fff;
+  padding: 20px;
+}
 
-  .contact-wrap {
-    background: #fff;
-    padding: 20px;
-  }
+.contact-wrap {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
 }
 
 .form-group {
@@ -32,7 +29,3 @@
   border-color: #d62196;
   color: #fff;
 }
-
-/* Rest of your styles */
-
-  

@@ -26,7 +26,7 @@ function Skills() {
   ];
 
   return (
-    <Container className='My Skills' style={{ paddingTop: '100px', paddingBottom: '100px' }}>
+    <Container  id='Skills'  className='My Skills' style={{ paddingTop: '100px', paddingBottom: '100px' }}>
       <h1 className='text-center text-black text-bold margin-100rem font-size-2rem' style={{ marginBottom: '30px' }}>Skills</h1>
       <Row>
         {skillsData.map((skill, index) => (

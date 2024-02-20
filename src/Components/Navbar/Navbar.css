@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #534666;
+    background: linear-gradient(135deg, rgba(127, 39, 156, 1) 0%, rgba(46, 39, 157, 1) 100%);
     padding: 15px 7%;
     position: fixed;
     z-index: 1;

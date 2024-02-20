@@ -10,4 +10,13 @@
   margin: 0 auto;  
 }*/
 
-  
+  /* YourCarousel.css */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black; /* Change the color to black */
+}*/
+
+.carousel-control-prev,
+.carousel-control-next {
+  color: black; /* Change the color to black */
+}
