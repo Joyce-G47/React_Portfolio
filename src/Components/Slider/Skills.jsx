@@ -6,6 +6,8 @@ import imag from '../../assets/Group 99.png';
 import Group102 from '../../assets/Group 102.png';
 import Group100 from '../../assets/Group 100.png';
 import Group103 from '../../assets/Group 103.png';
+import Group104 from '../../assets/Group 104.png';
+import Group00 from '../../assets/Group 00.png';
 
 function Skills() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -23,6 +25,8 @@ function Skills() {
     { image: Group102, title: 'CSS', rating: 4 },
     { image: Group100, title: 'Javascript', rating: 4 },
     { image: Group103, title: 'Python', rating: 3 },
+    { image: Group104, title: 'JAVA', rating: 3 },
+    { image: Group00, title: 'Power BI', rating: 3 },
   ];
 
   return (
@@ -33,12 +37,17 @@ function Skills() {
           <Col key={index}>
             <Card
               style={{
-                width: '17rem',
+                width: '20rem',
                 border: '0px solid #534666',
                 background: hoveredIndex === index ? 'white' : '#f2f9fa',
                 transform: hoveredIndex === index ? 'scale(1.01)' : 'scale(1)',
-                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-                
+                boxShadow: '0 8px 10px rgba(0, 0, 0, 0.2)',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '10px 20px',
+                justifyItems: 'center',
+                margin: '20px',
+                justifyContent: 'center',
               }}
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
@@ -60,8 +69,7 @@ function Skills() {
                       <span key={i} style={{ color: 'grey' }}>★</span>
                     ))}
                   </div>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
+                  
                 </Card.Text>
               </Card.Body>
             </Card>

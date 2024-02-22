@@ -3,13 +3,16 @@
     overflow: hidden;
     width: 100vw;
     max-width: 75rem;
-    display: inline;
+    display: flex;
     margin: 0 auto;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     text-align: center;
     background:#f2f9fa  ;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2rem;
     
     
 
