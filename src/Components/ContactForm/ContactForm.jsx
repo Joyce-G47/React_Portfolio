@@ -1,69 +1,71 @@
-import './ContactForm.scss'
-import React from 'react'
-import { useState } from 'react';
+import './ContactForm.scss';
+import React, { useState } from 'react';
+/*import { ToastContainer, Toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import firebaseDb from '../../Components/Firebase';
+/*import emailjs from 'emailjs-com';
+import { toast } from "your-toast-library"; // Replace 'your-toast-library' with the actual library you are using for toasts*/
 
-function ContactForm () {
-  
-        const [formData, setFormData] = useState({
-          name: '',
-          email: '',
-          subject: '',
-          message: '',
+function ContactForm() {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+      });
+    
+      const [errors, setErrors] = useState({});
+    
+      const handleInputChange = (e) => {
+        setFormData({
+          ...formData,
+          [e.target.name]: e.target.value,
         });
-      
-        const [errors, setErrors] = useState({});
-      
-        const handleInputChange = (e) => {
-          setFormData({
-            ...formData,
-            [e.target.name]: e.target.value,
-          });
-        };
-      
-        const validateForm = () => {
-          const newErrors = {};
-      
-          // Check if name is empty
-          if (!formData.name.trim()) {
-            newErrors.name = 'Name is required';
-          }
-      
-          // Check if email is empty and is a valid email address
-          if (!formData.email.trim()) {
-            newErrors.email = 'Email is required';
-          } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-            newErrors.email = 'Invalid email address';
-          }
-      
-          // Check if subject is empty
-          if (!formData.subject.trim()) {
-            newErrors.subject = 'Subject is required';
-          }
-      
-          // Check if message is empty
-          if (!formData.message.trim()) {
-            newErrors.message = 'Message is required';
-          }
-      
-          setErrors(newErrors);
-      
-          // Return true if there are no errors
-          return Object.keys(newErrors).length === 0;
-        };
-      
-        const handleSubmit = (e) => {
-          e.preventDefault();
-      
-          // Validate the form
-          if (validateForm()) {
-            // Form is valid, you can proceed with your submit logic
-            console.log('Form submitted:', formData);
-          } else {
-            // Form is not valid, do something (e.g., show error messages)
-            console.log('Form validation failed');
-          }
-        };
-      
+      };
+    
+      const validateForm = () => {
+        const newErrors = {};
+    
+        
+        if (!formData.name.trim()) {
+          newErrors.name = 'Name is required';
+        }
+    
+        
+        if (!formData.email.trim()) {
+          newErrors.email = 'Email is required';
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+          newErrors.email = 'Invalid email address';
+        }
+    
+        
+        if (!formData.subject.trim()) {
+          newErrors.subject = 'Subject is required';
+        }
+    
+        
+        if (!formData.message.trim()) {
+          newErrors.message = 'Message is required';
+        }
+    
+        setErrors(newErrors);
+    
+        return Object.keys(newErrors).length === 0;
+      };
+    
+      const handleSubmit = (e) => {
+        e.preventDefault();
+    
+        
+        if (validateForm()) {
+          
+          console.log('Form submitted:', formData);
+        } else {
+          
+          console.log('Form validation failed');
+        }
+      };
+    
     
   return (
     <section id='Contact' className="contact-section">
@@ -86,18 +88,19 @@ function ContactForm () {
                                         </p>
                                     </div>
                                 </div>
-                                <div className="dbox w-100 d-flex align-items-start">
+                                <div className="dbox w-100 d-flex align-items-center">
                                     <div className="icon d-flex align-items-center justify-content-center">
                                         <span className='fa fa-paper-plane'></span>
                                     </div>
                                     <div className="text pl-3">
                                         <p>
                                             <span>Email:</span> 
-                                            <a href="sibongile.gumbi@younglings.africa">sibongile.gumbi@younglings.africa</a>
+                                            <a href="mailto:sibongile.gumbi@younglings.africa">sibongile.gumbi@younglings.africa</a>
+
                                         </p>
                                     </div>
                                 </div>
-                                <div className="dbox w-100 d-flex align-items-start">
+                                <div className="dbox w-100 d-flex align-items-center">
                                     <div className="icon d-flex align-items-center justify-content-center">
                                         <span className='fa fa-phone'></span>
                                     </div>
@@ -107,6 +110,11 @@ function ContactForm () {
                                         </p>
                                     </div>
                                 </div>
+                                <div className="social-media">
+      <a href="https://github.com/Joyce-G47"><i className='bx bxl-github'></i></a>
+      <a href="https://twitter.com/sbo_gumbi"><i className='bx bxl-twitter'></i></a>
+      <a href="https://www.linkedin.com/in/joyce-gumbi/overlay/about-this-profile/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BI9Dnnlx2SPKPmeEw6LxH9g%3D%3D/"><i className='bx bxl-linkedin-square'></i></a>
+    </div>
                             </div>
 
                             <div className="col-md-6">
@@ -157,6 +165,9 @@ function ContactForm () {
                   name='message'
                   className={`form-control ${errors.message ? 'is-invalid' : ''}`}
                   placeholder='Message'
+                  cols="30"
+                  rows="6"
+                
                   onChange={handleInputChange}
                 ></textarea>
                 {errors.message && <div className="invalid-feedback">{errors.message}</div>}
@@ -171,6 +182,7 @@ function ContactForm () {
         </form>
       </div>
     </div>
+    
                         
                         
                     </div>

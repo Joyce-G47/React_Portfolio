@@ -5,6 +5,8 @@ import Skills from './Components/Slider/Skills'
 import Projects from './Components/Projects/Projects'
 import ContactForm from './Components/ContactForm/ContactForm'
 import Footer from './Components/Footer/Footer'
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const App = () => {
   return (

@@ -1,183 +1,180 @@
-/*#home{
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: left;
-    gap: 5rem;
-   /* height: calc(100vh - 4rem);
-    width: 100%;
-    max-width: 75rem;
-    margin: 0 auto;
-   /* overflow: hidden;
-    /*position: relative;*/
-    
-    
-    /*width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #534666;
-    padding: 15px 7%;}
-    
-
-/*.homecontainer {
-    width: 100px; /
-    height: 100px; 
-    overflow: hidden;
-    border-radius: 50%;
-    border: 2px solid #fff; 
-    display: flex;
-    align-items: center;
-  }
-  
-  .imag {
-    width: 20%;
-    height: 20%;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-top: 150px;
-    margin-left: 150px;
-  }
-  
-.img{
-    position: absolute;
-    z-index: -1;
-    top: -4rem;
-    right: 50;
-    object-fit: cover;
-    height: 50vh;
-    border: none;
-    border-radius:1rem ;
-    
-    
-}
-.homeContent{
-    height: 60vh;
-    width: 30vw;
-    padding-right: 3rem;
-    font-size: 1rem;
-    font-weight:500 ;
-    display: flex;
-    flex-direction: column;
-    justify-content:flex-end;
-    color: aliceblue;
-    position: relative;
-    flex: 0 0 auto;
-    margin-right: 20px;
-    
 
 
-}
-.nameTitle{
-    font-size: 2rem;
-    font-weight:200 ;
-    font-family: Arial, Helvetica, sans-serif;
-    color: blue;
-    
-    
-}
-.btn{
-    margin: 1rem 0;
-    padding: 0.75rem 2rem;
-    border: none;
-    border-radius: 1rem;
-    height: 5vh;
-    width: 25vh;
-
-}*/
-
-#home{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: left;
-    gap: 5rem;
-    background: #f2f9fa;
-    
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: #f2f9fa;
+  padding: 2rem;
 }
 
 .homecontainer {
-    width: 100px; 
-    height: 100px; 
-    overflow: hidden;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+}
+
+.imag {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 5rem;
+  margin-left: 1rem;
+}
+
+.homeContent {
+  width: 100%;
+  padding: 10rem;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #6e636b;
+  position: relative;
+  text-align: center;
+  margin-top: 1rem;
+  margin-left:8rem ;
+}
+
+.nameTitle {
+  font-size: 2rem;
+  font-weight: 200;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 1rem;
+  padding-left: 1rem;
+ 
+}
+
+.position {
+  font-size: 1.5rem;
+  font-weight: 200;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+.btn {
+  margin-right: rem;
+  margin-top: 1rem;
+  height: auto;
+  width: 10rem;
+  padding-left: 5rem;
+
+  
+}
+
+.paraInfo {
+  margin-top: 3rem;
+  text-align: center;
+  max-width: 50rem;
+  font-size: 1.2rem
+  
+}
+
+
+@media (min-width: 768px) {
+  #home {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .homecontainer {
+    margin-right: 2rem;
+    margin-top: 0;
+  }
+
+  .imag {
+    margin-left: 2rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 50%;
-    border: 2px solid #fff; 
-    display: flex;
-    align-items: center;
-    margin-right: 200px;
-    margin-top: 20px;
+    margin-top: 5rem;
+    margin-left: 1rem;
+  }
+
+  .homeContent {
+    text-align: center;
+    margin-left: 0;
+    margin-top: 0;
+  
+  }
+
+  .nameTitle,
+  .position,
+  .btn,
+  .homeInfo,
+  .paraInfo {
+    margin-left: 0;
+  }
+
+  
+}
+
+/*Style by me *
+
+/* Media Query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .homeContent {
+    padding: 5rem; /* Adjust the padding for smaller screens */
+    margin-left: 0; /* Reset the left margin */
+  }
+  .btn {
+    margin: 1rem 0 1rem auto;
+    border: none;
+    border-radius: rem;
+    height: 5vh;
+    width: 13vh;
+    padding-right: 5rem;
+    margin-right: 1.5rem;
+  }
+
+  .imag {
+    width: 70%;
+    height: 10%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 1rem;
+    margin-left: 3rem;
+  }
+  
+  .nameTitle {
+    font-size: 1.5rem;
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: -80px;
+    padding-left: 1rem;
+  }
+
+  .position {
+    font-size: 1rem;
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+  }
+
+  .paraInfo {
+    margin-top: 3rem;
+    text-align:center;
+    max-width: 50rem;
+    font-size: 0.9rem;
+    line-height: 1.5rem; 
+    width: 17rem;
+    margin-left: -3.5rem;
+    
+    
     
   }
   
-  .imag {
-    width: 60%;
-    height: 60%;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-top: 80px;
-    margin-left: 200px;
-    float: right;
-  }
-
-  .homeContent{
-    height: 60vh;
-    width: 50vw;
-    padding-right: 3rem;
-    font-size: 1rem;
-    font-weight:500 ;
-    display: flex;
-    flex-direction: column;
-    justify-content:flex-end;
-    color: #6e636b;
-    position: relative;
-    flex: 0 0 auto;
-    margin-left: 100px;
-    margin-top: 5px;
-  }
-
-  .nameTitle{
-    font-size: 2rem;
-    font-weight:200 ;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 300px;
-    margin-left: 100px;
-
-  }
-  .position{
-    font-size: 1.5rem;
-    font-weight:200 ;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 10px;
-    margin-left: 100px;
-    align-content: center;
-  }
-  .btn{
-    margin: 1rem 0;
-    padding: 0.75rem 2rem;
-    border: none;
-    border-radius: 1rem;
-    height: 5vh;
-    width: 25vh;
-    margin-top: 10px;
-    margin-left: 100px;
-    align-content: center;
-
-
-}
-
-.homeInfo{
-    font-size: 2rem;
-    font-weight:200 ;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 300px;
-    margin-left: 100px;
-}
-.paraInfo{
-    margin-top: 10px;
-    margin-left: 50px;
-    align-items: center;
-    max-width: 50rem;
 }
 
 
