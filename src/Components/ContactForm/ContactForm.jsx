@@ -1,10 +1,5 @@
 import './ContactForm.scss';
 import React, { useState } from 'react';
-/*import { ToastContainer, Toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import firebaseDb from '../../Components/Firebase';
-/*import emailjs from 'emailjs-com';
-import { toast } from "your-toast-library"; // Replace 'your-toast-library' with the actual library you are using for toasts*/
 
 function ContactForm() {
     const [formData, setFormData] = useState({
@@ -23,48 +18,31 @@ function ContactForm() {
         });
       };
     
-      const validateForm = () => {
-        const newErrors = {};
     
-        
-        if (!formData.name.trim()) {
-          newErrors.name = 'Name is required';
-        }
-    
-        
-        if (!formData.email.trim()) {
-          newErrors.email = 'Email is required';
-        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-          newErrors.email = 'Invalid email address';
-        }
-    
-        
-        if (!formData.subject.trim()) {
-          newErrors.subject = 'Subject is required';
-        }
-    
-        
-        if (!formData.message.trim()) {
-          newErrors.message = 'Message is required';
-        }
-    
-        setErrors(newErrors);
-    
-        return Object.keys(newErrors).length === 0;
-      };
     
       const handleSubmit = (e) => {
         e.preventDefault();
     
         
         if (validateForm()) {
-          
-          console.log('Form submitted:', formData);
+          emailjs
+            .sendForm('service_jqi6jiq', 'template_h60a5qs', e.target, '3oqffSUnMVmhrjmZD')
+            .then(
+              (result) => {
+                console.log('Email sent successfully:', result.text);
+                
+              },
+              (error) => {
+                console.error('Error sending email:', error.text);
+                
+              }
+            );
         } else {
-          
           console.log('Form validation failed');
+         
         }
       };
+    
     
     
   return (
@@ -79,7 +57,7 @@ function ContactForm() {
                                 <h3>LETS GET IN TOUCH</h3>
                                 <p className='mb-4'>I am open to any  suggestions or  chat about interesting projects that we can work on.</p>
                                 <div className="dbox w-100 d-flex align-items-start ">
-                                    <div className="icon d-flex align-items-center justify-content-center">
+                                    <div className="icon d-flex align-items-center justify-content-center ">
                                         <span className='fa fa-map-marker'></span>
                                     </div>
                                     <div className="text pl-3">
@@ -110,12 +88,7 @@ function ContactForm() {
                                         </p>
                                     </div>
                                 </div>
-                                <div className="social-media">
-      <a href="https://github.com/Joyce-G47"><i className='bx bxl-github'></i></a>
-      <a href="https://twitter.com/sbo_gumbi"><i className='bx bxl-twitter'></i></a>
-      <a href="https://www.linkedin.com/in/joyce-gumbi/overlay/about-this-profile/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BI9Dnnlx2SPKPmeEw6LxH9g%3D%3D/"><i className='bx bxl-linkedin-square'></i></a>
-    </div>
-                            </div>
+                              </div>
 
                             <div className="col-md-6">
       <div className='contact-wrap w-100 p-lg-5 p-4'>
