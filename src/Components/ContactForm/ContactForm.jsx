@@ -3,6 +3,9 @@ import { useState } from "react";
 import { send } from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSquareGithub, faTwitter,faLinkedinIn} from "@fortawesome/free-brands-svg-icons";
+
 
 function ContactForm() {
   const [toSend, setToSend] = useState({
@@ -59,17 +62,17 @@ function ContactForm() {
       }));
     }
 
-   
+    // Check for errors and prevent API call if there are any
     if (
       formData.name &&
       formData.email &&
       formData.subject &&
       formData.message
     ) {
-      
+      // Continue with the API call if validations pass
       send("service_jqi6jiq", "template_h60a5qs", toSend, "3oqffSUnMVmhrjmZD")
         .then((response) => {
-         
+          // Move the toast.success call inside the then block
           toast.success("Message sent successfully", {
             position: "top-right",
             autoClose: 5000,
@@ -78,10 +81,10 @@ function ContactForm() {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "dark",
+            theme: "dark", // Change theme to "success"
           });
 
-          
+          // Clear the form and errors after successful submission
           setToSend({
             name: "",
             email: "",
@@ -106,7 +109,7 @@ function ContactForm() {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-    
+    // Clear the specific error when the user starts typing
     setErrors((prevErrors) => ({ ...prevErrors, [e.target.name]: undefined }));
   };
 
@@ -156,6 +159,21 @@ function ContactForm() {
                     </p>
                   </div>
                 </div>
+                <div className="social-media">
+                   <button className="card1">
+                   <FontAwesomeIcon icon={faLinkedinIn} />
+
+                   </button>
+                   <button className="card2">
+                   <FontAwesomeIcon icon={faTwitter} />
+                   </button>
+                   <button className="card3">
+                   <FontAwesomeIcon icon={faSquareGithub} />
+                   </button>
+                  
+          
+        </div>
+                
               </div>
 
               <div className="col-md-6">
@@ -252,7 +270,7 @@ function ContactForm() {
                             value="Send Message"
                             className="btn btn-primary"
                           />
-                          
+                          {/* <button type="submit" className='btn btn-primary'>Submit</button> */}
                         </div>
                       </div>
                     </div>
