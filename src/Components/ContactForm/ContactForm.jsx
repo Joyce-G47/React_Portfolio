@@ -3,8 +3,7 @@ import { useState } from "react";
 import { send } from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSquareGithub, faTwitter,faLinkedinIn} from "@fortawesome/free-brands-svg-icons";
+
 
 
 function ContactForm() {
@@ -159,20 +158,7 @@ function ContactForm() {
                     </p>
                   </div>
                 </div>
-                <div className="social-media">
-                   <button className="card1">
-                   <FontAwesomeIcon icon={faLinkedinIn} />
-
-                   </button>
-                   <button className="card2">
-                   <FontAwesomeIcon icon={faTwitter} />
-                   </button>
-                   <button className="card3">
-                   <FontAwesomeIcon icon={faSquareGithub} />
-                   </button>
-                  
-          
-        </div>
+                
                 
               </div>
 
