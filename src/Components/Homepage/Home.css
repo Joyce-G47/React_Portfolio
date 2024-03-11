@@ -10,39 +10,13 @@
   padding: 2rem;
   
 }
-.paraInfo {
-  margin-top: 7rem;
-  text-align: center;
-  max-width: 30rem;
-  font-size: 1.2rem
-  
-}.flip-card {
-  background-color: transparent;
-  width: 400px;
-  height: 500px;
-  perspective: 1000px;
-  font-family: sans-serif;
-  margin-top: rem;
-}
 
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.flip-card-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: transform .2s ease, opacity .2s ease;
-  color: #6e636b;
+.card-info {
+  width: 500px;
   
 }
+
+
 .card-avatar {
   --size: 200px;
   width: var(--size);
@@ -50,7 +24,7 @@
   border-radius: 50%;
   transition: transform .2s ease;
   margin-bottom: 8rem;
-  margin-right: 2rem;
+  margin-left: 10rem;
   margin-top: -3rem;
   
  }
@@ -60,6 +34,7 @@
   font-size: 1.7em;
   font-weight: 600;
   line-height: 2rem;
+  margin-left: 10rem;
   
  }
 
@@ -67,57 +42,16 @@
   color: #859ba8;
   font-size: 1.2em;
   margin-top: 2rem;
+  margin-left: 11rem;
  }
  
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border: 0 5px 8px rgba(127, 39, 156, 1);
-  border-radius: 1rem;
-}
-
-.flip-card-front {
-  background: #f2f9fa
-  
- 
-}
-
-.flip-card-back {
-  background: 5px 5px 8px rgba(127, 39, 156, 1) ;
-  color: black;
-  transform: rotateY(180deg);
-  display: flex
-  ;
-}
-
-.flip-card-front:hover {
-  box-shadow: 0 5px 8px rgba(127, 39, 156, 1);
-  
- }
-
- .flip-card-back:hover {
-  box-shadow: 0 5px 8px rgba(127, 39, 156, 1);
-  
- }
 
 
 
  /*card-social*/
 
  .card-social {
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: space-around;
   width: 45%;
@@ -126,8 +60,8 @@
  }
  
  .card1 {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   outline: none;
   border: none;
   background: white;
@@ -144,8 +78,8 @@
 }
 
 .card2 {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   outline: none;
   border: none;
   background: white;
@@ -162,8 +96,8 @@
 }
 
 .card3 {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   outline: none;
   border: none;
   background: white;
@@ -235,6 +169,83 @@
 .card4 {
   box-shadow: 0 5px 8px rgba(127, 39, 156, 1);
 }
+.paraInfo {
+  margin-top: -2rem;
+  text-align: center;
+  max-width: 30rem;
+  font-size: 1.2rem
+  
+}.flip-card {
+  background-color: transparent;
+  width: 600px;
+  height: 500px;
+  perspective: 1000px;
+  font-family: sans-serif;
+  margin-top: rem;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform .2s ease, opacity .2s ease;
+  color: #6e636b;
+  
+}
+
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 0 2px 4px rgba(127, 39, 156, 1);
+  border-radius: 1rem;
+}
+
+.flip-card-front {
+  background: #f2f9fa
+  
+ 
+}
+
+.flip-card-back {
+  background: 5px 5px 8px rgba(127, 39, 156, 1) ;
+  color: black;
+  transform: rotateY(180deg);
+  display: flex
+  ;
+}
+
+.flip-card-front:hover {
+  box-shadow: 0 5px 8px rgba(127, 39, 156, 1);
+  
+ }
+
+ .flip-card-back:hover {
+  box-shadow: 0 5px 8px rgba(127, 39, 156, 1);
+  
+ }
+
 
 
 /*responsiveness*/
@@ -306,7 +317,7 @@
     border-radius: rem;
     height: 5vh;
     width: 13vh;
-    padding-right: 5rem;
+    padding-left: 5rem;
     margin-right: 9.5rem;
   }
 
@@ -339,10 +350,9 @@
     margin-top: 0.5rem;
     padding-left: 1rem;
   }
-
-  
-
   
 }
 
- 
+
+
+
