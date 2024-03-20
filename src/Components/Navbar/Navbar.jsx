@@ -17,10 +17,12 @@ const Navbar = () => {
         <div className="bar"></div>
         <div className="bar"></div>
         <div className="bar"></div>
+        <div className="bar"></div>
       </div>
 
       <ul className={`menu ${menuOpen ? 'open' : ''}`}>
         <li style={{ color: 'white' }}><a href="#Home" onClick={toggleMenu}>Home</a></li>
+        <li><a href="#About Me" onClick={toggleMenu}>About Me</a></li>
         <li><a href="#Skills" onClick={toggleMenu}>Skills</a></li>
         <li><a href="#Projects" onClick={toggleMenu}>Projects</a></li>
         <li><a href="#Contact" onClick={toggleMenu}>Contact</a></li>

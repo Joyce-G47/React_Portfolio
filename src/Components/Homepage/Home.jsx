@@ -7,11 +7,7 @@ import { faSquareGithub, faTwitter,faLinkedinIn} from "@fortawesome/free-brands-
 
 
 const Home = () => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
-  const handleCardClick = () => {
-    setIsFlipped(!isFlipped);
-  };
+ 
 
   return (
     <section id='home'>
@@ -71,59 +67,27 @@ const Home = () => {
         </div> 
         
       
+<div>
+        <span>
+          <p className='paraInfo'>Hey there, I'm Sibongile, a passionate Software Developer based in vibrant Cape Town, South Africa. Let's connect and build something extraordinary together.
 
-      
+            
+          </p>
+        </span>   
+
+        </div>
         
         
   
 
 
 
-  <div className={`flip-card ${isFlipped ? 'flipped' : ''}`} onClick={handleCardClick}>
-        <div className="flip-card-inner">
-          <div className="flip-card-front">
-            <div className="flip-card-info">
-        <span>
-          <p className='paraInfo'>Hi there, my name is Sibongile and I am a Software Developer.
-            I create cool web applications! I've learned how to use languages like HTML, CSS, Java, Python, and JavaScript.
-            This job isn't just a regular job; it's a journey where I enjoy working with different people and solve interesting life problems.
-          </p>
-        </span>
-        </div>
-        </div>
-
-        <div className="flip-card-back">
-          <div className='education-experience-container'>
-            <div className='Education' style={{ textAlign: 'left', marginLeft: '10px', padding: '10px' }}>
-              <p style={{ fontWeight: 'bold', fontSize: '1em', textAlign: 'center', marginTop: '10px', marginBottom: '5px' }}>Education</p>
-              <span style={{ fontSize: '0.9em', marginBottom: '5px', fontWeight: 'bold' }}>Bachelor of Business Administration Honours</span><br />
-              <span style={{ fontSize: '0.8em', marginBottom: '5px' }}>Management College of South Africa</span><br />
-              <span style={{ fontSize: '0.8em', marginBottom: '5px' }}>2021</span><br />
-              <span style={{ fontSize: '0.9em', marginBottom: '5px', fontWeight: 'bold' }}>IT Technician Certificate</span><br />
-              <span style={{ fontSize: '0.8em', marginBottom: '5px' }}>CIDA CITY Campus ICT</span><br />
-              <span style={{ fontSize: '0.8em', marginBottom: '5px' }}>2013</span><br />
-              <span style={{ fontSize: '0.9em', marginBottom: '5px', fontWeight: 'bold' }}>AWS Cloud Practitioner Certificate</span><br />
-              <span style={{ fontSize: '0.8em', marginBottom: '5px' }}>Pearson</span><br />
-              <span style={{ fontSize: '0.8em', marginBottom: '5px' }}>2022</span>
-            </div>
-          
-          <div className='Experience' style={{ textAlign: 'left', marginLeft: '10px', padding: '10px' }}>
-            <p style={{ fontWeight: 'bold', fontSize: '1em', textAlign: 'center', marginBottom: '5px' }}>Experience</p>
-            <span style={{ fontSize: '0.9em', marginBottom: '5px', fontWeight: 'bold' }}>Software Developer</span><br />
-            <span style={{ fontSize: '0.8em', marginBottom: '5px' }}>Younglings Africa</span><br />
-            <span style={{ fontSize: '0.8em', marginBottom: '5px' }}>Jan 2024- Present</span><br />
-            <span style={{ fontSize: '0.9em', marginBottom: '5px', fontWeight: 'bold' }}>Universal Banker</span><br />
-            <span style={{ fontSize: '0.8em', marginBottom: '5px' }}>Standard Bank</span><br />
-            <span style={{ fontSize: '0.8em', marginBottom: '5px' }}>2022-2023</span><br />
-          </div>
-        </div>
-      </div>
-
+  
        
 
 
-        </div>
-      </div>
+        
+      
     </section>
   );
 }

@@ -30,6 +30,8 @@ function Skills() {
   ];
 
   return (
+
+    
     <Container  id='Skills'  className='My Skills' style={{ paddingTop: '100px', paddingBottom: '100px' }}>
       <h3 className='text-center text-black text-bold margin-100rem font-size-1rem' style={{ marginBottom: '30px' }}>Skills</h3>
       <Row>
