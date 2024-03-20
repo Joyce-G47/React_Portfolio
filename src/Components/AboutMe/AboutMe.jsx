@@ -3,7 +3,7 @@ import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineC
 import { Card } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap, faBriefcase,faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons';
-
+import Sibo from '../../assets/Sibo2.png';
 
 function AboutMe() {
   const [showEducation, setShowEducation] = useState(true);
@@ -13,7 +13,9 @@ function AboutMe() {
     <section id='about-me'>
       <div className="about-me-container" style={{ display: 'flex', justifyContent: 'center' }}>
         <div className="about-me-content" style={{ maxWidth: '600px', marginRight: '50px' }}>
-          <h3 className='text-center text-bold margin-100rem font-size-1rem' style={{ marginBottom: '30px', color: '#d62196', marginTop:'400px'}}>About Me</h3>
+         
+        <h3 style={{ fontWeight: 'bold', marginBottom: '30px', color: '#d62196', marginTop: '100px', textAlign: 'center' }}>About Me</h3>
+          <img src={Sibo} alt=""  style={{border:'50%', width:'300px'}}/>
           <p style={{ lineHeight: '1.5', fontSize: 'large', color: '#6e636b' , marginTop:'2px'}}>
             As a Junior Software Developer, I create cool web applications! I've learned how to use languages like HTML, CSS, Java, Python, and JavaScript. I collaborated with my team members to design, develop, and maintain software applications. Responsibilities include coding, debugging, and testing to ensure the delivery of high-quality solutions. This job isn't just a regular job; it's a journey where I enjoy working with different people and solve interesting life problems.
           </p>
@@ -30,7 +32,7 @@ function AboutMe() {
                 height: 35,
                 transition: 'background-color 0.3s',
                 cursor: 'pointer',
-                borderRadius: '5px',
+                borderRadius: '10px',
                 border: 'none',
                 marginTop: '150px',
               }}
@@ -58,7 +60,7 @@ function AboutMe() {
                 height: 35,
                 transition: 'background-color 0.3s',
                 cursor: 'pointer',
-                borderRadius: '5px',
+                borderRadius: '10px',
                 border: 'none',
                 marginTop: '150px',
               }}
@@ -86,7 +88,7 @@ function AboutMe() {
                 height: 35,
                 transition: 'background-color 0.3s',
                 cursor: 'pointer',
-                borderRadius: '5px',
+                borderRadius: '10px',
                 border: 'none',
                 marginTop: '150px',
               }}
