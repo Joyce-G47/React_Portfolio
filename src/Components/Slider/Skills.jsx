@@ -11,7 +11,7 @@ function Skills() {
         <Col>
           <Card
             style={{
-              width: '20rem',
+              width: '18rem',
               border: '0px solid #534666',
               background: '#f2f9fa',
               boxShadow: '0 8px 10px rgba(0, 0, 0, 0.2)',
@@ -42,7 +42,7 @@ function Skills() {
         <Col>
           <Card
             style={{
-              width: '20rem',
+              width: '18rem',
               border: '0px solid #534666',
               background: '#f2f9fa',
               boxShadow: '0 8px 10px rgba(0, 0, 0, 0.2)',
@@ -77,7 +77,7 @@ function Skills() {
         <Col>
           <Card
             style={{
-              width: '20rem',
+              width: '18rem',
               border: '0px solid #534666',
               background: '#f2f9fa',
               boxShadow: '0 8px 10px rgba(0, 0, 0, 0.2)',
@@ -91,7 +91,7 @@ function Skills() {
             }}
           >
             <Card.Body>
-              <Card.Title className="text-center">Back-end Development</Card.Title>
+              <Card.Title className="text-left">Back-end Development</Card.Title>
               <Card.Text className="text-center">
               <ProgressBar now={80} label={`${80}%`} variant="success" />
                 <div>Node JS</div>

@@ -61,10 +61,12 @@
     flex-direction: column;
     position: absolute;
     top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: rgba(127, 39, 156, 1);
+    left: 75px;
+    width: 80%;
+    background-color: #CDB7FA;
     text-align: center;
+    margin-top: 34px;
+    border-radius: 10%;
   }
 
   .menu.open {

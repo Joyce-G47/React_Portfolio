@@ -5,6 +5,7 @@ import Sibongile from '../../assets/Sibongile Gumbi (1).pdf';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareGithub, faTwitter, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
+
 const Home = () => {
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about-me');
@@ -13,12 +14,16 @@ const Home = () => {
 
   return (
     <section id='home'>
-      <div className="card-info">
+      
         <div className="card-avatar">
-          <img src={imag} alt="Avatar" className='imag'/> {/* Add alt text for accessibility */}
+          <img src={imag} alt="Avatar" className='imag'/> 
         </div>
-        <div className="card-title">Sibongile Gumbi</div>
-        <div className="card-subtitle">Software Developer</div>
+        
+        <div className='card-paragraph' style={{ lineHeight: '1.5', fontSize: 'large', color: '#6e636b' , marginTop:'2px'}}>
+          <h2>Hey there, my name is <span style={{ color: '#d62196' }}>Sibongile Gumbi</span></h2><br/>
+          <p> I am a passionate Software Developer based in vibrant Cape Town, South Africa.
+             Let's connect and build something extraordinary together.</p>
+        </div>
         <div className='card-social'>
           <a href="https://www.linkedin.com/in/joyce-gumbi/overlay/about-this-profile/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BI9Dnnlx2SPKPmeEw6LxH9g%3D%3D/" target="_blank" rel="noopener noreferrer">
             <button className="card1">
@@ -73,8 +78,8 @@ const Home = () => {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 97 162"
-            height="162"
-            width="97"
+            height="20"
+            width="10"
             className="svg"
           >
             <path
@@ -83,7 +88,7 @@ const Home = () => {
             ></path>
           </svg>
         </button>
-      </div>
+    
     </section>
   );
 };
