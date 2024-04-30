@@ -1,51 +1,90 @@
 import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './Projects.css';
-import Group50a from '../../assets/Group 50a.png';
-import Rectangle36 from '../../assets/Rectangle 36.png';
-import Rectangle43 from '../../assets/Rectangle 43.png';
+import { Carousel, Card, Button } from 'react-bootstrap';
+
+
 import Rectangle52 from '../../assets/Rectangle 52.png';
-import Rectangle59a from '../../assets/Rectangle 59a.png';
+import ToDoList from '../../assets/Rectangle 36.png';
+import BankingApp from '../../assets/Rectangle 43.png';
+import FinancialCalculator from '../../assets/Rectangle 59a.png';
+import { ButtonBase } from '@material-ui/core';
+import { faCalendar, faLaptopCode, faLightbulb } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-function Projects() {
+
+// Define your project data
+const projects = [
+  {
+    id: 1,
+    title: 'Hlalanathi B&B',
+    faLaptopCode: 'HTML, CSS, JavaScript',
+    faLightbulb: 'Provide essential information about the bed and breakfast. Showcase unique features and offerings.',
+    faCalendar: '2023',
+    image: Rectangle52,
+  },
+  {
+    id: 2,
+    title: 'Banking App',
+    description: 'Description of Project 2',
+    image: BankingApp,
+  },
+  {
+    id: 3,
+    title: 'Financial Calculator',
+    description: 'Description of Project 2',
+    image: FinancialCalculator,
+  },
+  {
+    id: 4,
+    title: 'To-Do List App',
+    description: 'Description of Project 2',
+    image: ToDoList,
+  },
+  
+];
+
+const ProjectCarousel = () => {
   return (
-    <Carousel id='Projects'  className='My projects' style={{ paddingTop: '100px', paddingBottom: '100px', background: '#f2f9fa' }}>
-      <h1 className='text-center text-black text-bold margin-100rem font-size-10rem'>My Projects</h1>
-      <Carousel.Item>
-        <img className="d-block w-100" style={{ maxWidth: '600px', margin: 'auto' }} src={Group50a} alt="Personal Portfolio" />
-        <Carousel.Caption className='text-black'>
-          <h3>Personal Portfolio</h3>
+    <section id='projects' style={{ paddingTop: '50px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px',backgroundColor:'#f2f9fa'  }}>
 
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img className="d-block w-100" style={{ maxWidth: '600px', margin: 'auto' }} src={Rectangle36} alt="To-Do list" />
-        <Carousel.Caption className='text-black'>
-          <h3>To-Do list</h3>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img className="d-block w-100" style={{ maxWidth: '600px', margin: 'auto' }} src={Rectangle43} alt="Financial Calculator" />
-        <Carousel.Caption className='text-black'>
-          <h3>Financial Calculator</h3>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img className="d-block w-100" style={{ maxWidth: '600px', margin: 'auto' }} src={Rectangle52} alt="Hlalanathi B&B Website" />
-        <Carousel.Caption className='text-black'>
-          <h3>Hlalanathi B&B Website</h3>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img className="d-block w-100" style={{ maxWidth: '600px', margin: 'auto' }} src={Rectangle59a} alt="Banking App" />
-        <Carousel.Caption className='text-black'>
-          <h3>Banking App</h3>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+      <div style={{ gridColumn: '1 / 2' }}>
+        <h3 style={{ fontWeight: 'bold', marginBottom: '30px', color: '#d62196', marginTop: '50px', textAlign: 'center' }}>My latest work</h3>
+      <h4 style={{
+        width:'30rem',
+        height:'50px',
+        lineHeight: '1.5', 
+        fontSize: 'extralarge', 
+        color: '#6e636b',
+        padding:'40px' }}
+          >
+            Don't be shy; take a peek at my work and see what I've been up to!
+      </h4>
+      
+      </div>
+      <div style={{ gridColumn: '2 / 3' }}>
+      <Carousel style={{marginTop: '50px'}}>
+          {projects.map(project => (
+            <Carousel.Item key={project.id}>
+              <Card style={{backgroundColor:'#f2f9fa',border: 'none', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'}}>
+                <Card.Img variant="top" src={project.image} style={{ width: '100%', height: 'auto'}} />
+                <Card.Body>
+                  <Card.Title>{project.title}</Card.Title>
+                  <Card.Text style={{ fontSize: '16px'}}>
+                    
+                  <FontAwesomeIcon icon={faLaptopCode} style={{color: '#d62196' }} /> {project.faLaptopCode} <br />
+                  <FontAwesomeIcon icon={faLightbulb} style={{color: '#d62196' }} /> {project.faLightbulb} <br />
+                  <FontAwesomeIcon icon={faCalendar} style={{color: '#d62196' }}/> {project.faCalendar}
+
+                    </Card.Text>
+                </Card.Body>
+              </Card>
+            </Carousel.Item>
+          ))}
+        </Carousel>
+    </div>
+    
+    </section>
   );
-}
+};
 
-export default Projects;
-
+export default ProjectCarousel;

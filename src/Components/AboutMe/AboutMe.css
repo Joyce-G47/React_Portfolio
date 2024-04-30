@@ -1,16 +1,2 @@
-.about-me-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
 
-.about-me-content {
-  max-width: 600px;
-  margin-right: 20px;
-}
-
-.about-me-content img {
-  width: 200px;
-  border-radius: 50%;
-}
 
