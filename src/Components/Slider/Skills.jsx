@@ -1,109 +1,70 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import { Container, Row, Col } from 'react-bootstrap';
-import ProgressBar from 'react-bootstrap/ProgressBar';
+import { LinearProgress } from '@material-ui/core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGears, faLaptop, faLaptopCode, faLayerGroup } from '@fortawesome/free-solid-svg-icons';
 
 function Skills() {
   return (
-    <Container id='Skills' className='My Skills' style={{ paddingTop: '100px', paddingBottom: '100px' }}>
-      <h3 style={{ fontWeight: 'bold', marginBottom: '30px', color: '#d62196', marginTop: '100px', textAlign: 'center', justifyContent:'center'}}>Skills</h3>
-      <Row>
-        <Col>
-          <Card
-            style={{
-              width: '18rem',
-              border: '0px solid #534666',
-              background: '#f2f9fa',
-              boxShadow: '0 8px 10px rgba(0, 0, 0, 0.2)',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '10px 20px',
-              justifyItems: 'center',
-              margin: '20px',
-              justifyContent: 'center',
-              height: '25rem',
-              marginTop: '20px',
-            }}
-          >
-            <Card.Body>
-              <Card.Title className="text-center">Programming Languages</Card.Title>
-              <Card.Text className="text-center">
-        
-                <div>JavaScript</div>
-                <ProgressBar now={80} label={`${80}%`} variant="success" />
-                <div>Java</div>
-                <ProgressBar now={70} label={`${70}%`} variant="info" />
-                <div>Python</div>
-                <ProgressBar now={70} label={`${70}%`} variant="warning" />
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col>
-          <Card
-            style={{
-              width: '18rem',
-              border: '0px solid #534666',
-              background: '#f2f9fa',
-              boxShadow: '0 8px 10px rgba(0, 0, 0, 0.2)',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '10px 20px',
-              justifyItems: 'center',
-              margin: '20px',
-              justifyContent: 'center',
-              height: '25rem',
-            }}
-          >
-            <Card.Body>
-              <Card.Title className="text-center">Front-end Development</Card.Title>
-              <Card.Text className="text-center">
-              <ProgressBar now={80} label={`${80}%`} variant="success" />
-                <div>HTML</div>
-                <ProgressBar now={70} label={`${70}%`} variant="info" />
-                <div>CSS</div>
-                <ProgressBar now={80} label={`${80}%`} variant="success" />
-                <div>SCSS</div>
-                <ProgressBar now={70} label={`${70}%`} variant="info" />
-                <div>Tailwind</div>
-                <ProgressBar now={70} label={`${70}%`} variant="warning" />
-                <div>Bootstrap</div>
-                <ProgressBar now={70} label={`${70}%`} variant="warning" />
-                <div>React</div>
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col>
-          <Card
-            style={{
-              width: '18rem',
-              border: '0px solid #534666',
-              background: '#f2f9fa',
-              boxShadow: '0 8px 10px rgba(0, 0, 0, 0.2)',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '10px 20px',
-              justifyItems: 'center',
-              margin: '20px',
-              justifyContent: 'center',
-              height: '25rem',
-            }}
-          >
-            <Card.Body>
-              <Card.Title className="text-left">Back-end Development</Card.Title>
-              <Card.Text className="text-center">
-              <ProgressBar now={80} label={`${80}%`} variant="success" />
-                <div>Node JS</div>
-              
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+    <section id='Skills' style={{padding:'50px'}}>
+      <h3 style={{ fontWeight: 'bold', marginBottom: '30px', color: '#d62196', marginTop: '50px', textAlign: 'center' }}>Skills</h3>
+
+      <div className="skills-cards" style={{ display: 'flex', justifyContent: 'center', gap: '30px' }}>
+        {/* Front-End Development Card */}
+        <Card style={{ width: '20rem', height: '25rem', marginBottom: '10px', border: '1px solid #CDB7FA', boxShadow: 'none', transition: 'transform 0.3s' }}>
+          <Card.Body style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <FontAwesomeIcon icon={faLaptop} size="3x" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '25px', color: '#CDB7FA' }} />
+            </div>
+
+              <h6 style={{ fontWeight: 'bold', marginTop:'12px', textAlign: 'center' }}>Front-End Development</h6>
+              <ul style={{marginTop:'10'}}>
+                <li><span style={{ fontSize: '0.8em' }}>HTML</span> <LinearProgress variant="determinate" value={90} /><span style={{ fontSize: '0.8em', marginLeft: '5px' }}>90%</span></li>
+                <li><span style={{ fontSize: '0.8em' }}>CSS</span> <LinearProgress variant="determinate" value={85} /><span style={{ fontSize: '0.8em', marginLeft: '5px' }}>85%</span></li>
+                <li><span style={{ fontSize: '0.8em' }}>Bootstrap</span> <LinearProgress variant="determinate" value={80} /><span style={{ fontSize: '0.8em', marginLeft: '5px' }}>80%</span></li>
+                <li><span style={{ fontSize: '0.8em' }}>React</span> <LinearProgress variant="determinate" value={75} /><span style={{ fontSize: '0.8em', marginLeft: '5px' }}>75%</span></li>
+              </ul>
+            </div>
+          </Card.Body>
+        </Card>
+
+        {/* Back-End Development Card */}
+        <Card style={{ width: '20rem', height: '25rem', marginBottom: '10px', border: '1px solid #CDB7FA', boxShadow: 'none', transition: 'transform 0.3s' }}>
+          <Card.Body style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <FontAwesomeIcon icon={faLaptopCode} size="3x" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '25px', color: '#CDB7FA' }} />
+            </div>
+              <h6 style={{ fontWeight: 'bold' , marginTop:'12px', textAlign: 'center'}}>Back-End Development</h6>
+              <ul style={{marginTop:'10'}}>
+                <li><span style={{ fontSize: '0.8em' }}>Node.js</span> <LinearProgress variant="determinate" value={85} /><span style={{ fontSize: '0.8em', marginLeft: '5px' }}>85%</span></li>
+                <li><span style={{ fontSize: '0.8em' }}>Express.js</span> <LinearProgress variant="determinate" value={80} /><span style={{ fontSize: '0.8em', marginLeft: '5px' }}>80%</span></li>
+                <li><span style={{ fontSize: '0.8em' }}>MongoDB</span> <LinearProgress variant="determinate" value={75} /><span style={{ fontSize: '0.8em', marginLeft: '5px' }}>75%</span></li>
+              </ul>
+            </div>
+          </Card.Body>
+        </Card>
+
+        {/* Programming Languages Card */}
+        <Card style={{ width: '20rem', height: '25rem', marginBottom: '10px', border: '1px solid #CDB7FA', boxShadow: 'none', transition: 'transform 0.3s' }}>
+          <Card.Body style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <FontAwesomeIcon icon={faLayerGroup} size="3x" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '25px', color: '#CDB7FA' }} />
+            </div>
+              <h6 style={{ fontWeight: 'bold' , marginTop:'12px', textAlign: 'center' }}>Programming Languages</h6>
+              <ul style={{marginTop:'10'}}>
+                <li><span style={{ fontSize: '0.8em' }}>Python</span> <LinearProgress variant="determinate" value={90} /><span style={{ fontSize: '0.8em', marginLeft: '5px' }}>90%</span></li>
+                <li><span style={{ fontSize: '0.8em' }}>Java</span> <LinearProgress variant="determinate" value={85} /><span style={{ fontSize: '0.8em', marginLeft: '5px' }}>85%</span></li>
+                <li><span style={{ fontSize: '0.8em' }}>C++</span> <LinearProgress variant="determinate" value={80} /><span style={{ fontSize: '0.8em', marginLeft: '5px' }}>80%</span></li>
+              </ul>
+            </div>
+          </Card.Body>
+        </Card>
+      </div>
+    </section>
   );
 }
 
 export default Skills;
-

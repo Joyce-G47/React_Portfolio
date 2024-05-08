@@ -1,9 +1,15 @@
 
 import React, { useState } from 'react';
-import { Tabs, Tab, Card, CardContent } from '@material-ui/core';
+import { Card, CardContent } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGraduationCap, faBriefcase, faGears, faInstitution } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faAward } from '@fortawesome/free-solid-svg-icons';
 import './AboutMe.css';
+import Ellipse9 from '../../assets/Ellipse9.png';
+import { faRProject } from '@fortawesome/free-brands-svg-icons/faRProject';
+import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons/faProjectDiagram';
+import { faTasks } from '@fortawesome/free-solid-svg-icons/faTasks';
+import { faPeopleGroup } from '@fortawesome/free-solid-svg-icons/faPeopleGroup';
+
 
 function AboutMe() {
   const [value, setValue] = useState(0);
@@ -13,128 +19,95 @@ function AboutMe() {
   };
 
   return (
-    <section id='about-me' style={{ paddingTop: '50px' }}>
-      <h3 style={{ fontWeight: 'bold', marginBottom: '30px', color: '#d62196', marginTop: '50px', textAlign: 'center' }}>About Me</h3>
-      <div className="about-me-container" style={{ gap: '3rem' }}>
+    <section id='about-me' style={{ paddingTop: '50px'}}>
+    
+      <h3 style={{ fontWeight: 'bold', marginBottom: '50px', color: '#d62196', marginTop: '50px', textAlign: 'center' }}>About Me</h3>
+      <div className="about-me-container" style={{ gap: '2rem',display:'flex',flexDirection:'row',justifyContent:'right' }}>
 
-        <div className="qualification-card" style={{ display: 'flex', justifyContent: 'center' }}>
-          <div>
-            <FontAwesomeIcon icon={faGraduationCap} size="4x" style={{ marginRight: '70px', marginTop: '25px', color: '#CDB7FA' }} />
-            <h5 style={{ fontWeight: 'bold', marginTop: '15px', color: '#CDB7FA' }}>Qualifications</h5>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+  <img src={Ellipse9} alt="Ellipse9" style={{ width: '10rem', height: '10rem', borderRadius: '20px', marginBottom: '20px' }} />
+  <p style={{ color: '#6e636b', textAlign: 'justify', fontSize: '18px', lineHeight: '1.7', marginTop: '20px', marginBottom: '20px' }}>I design, develop, and maintain cool software applications. My key responsibilities include coding, debugging, and testing to ensure the delivery of high-quality solutions.</p>
+</div>
+
+        <div className="qualification-card" style={{ display: 'flex',flexDirection: 'column', justifyContent: 'center' }}>
+        
+          <Card style={{ display: 'flex',flexDirection:'column', alignItems: 'left', width: '16rem', height: '15rem',color: '#6e636b',marginBottom: '20px', border: '1px solid #6e636b',borderRadius:'20px', boxShadow: 'none', transition: 'transform 0.3s' }}>
+            <CardContent style={{ display: 'flex',flexDirection:'column', alignContent: 'center', justifyContent: 'center' }} className="hoverEffect">
+            <FontAwesomeIcon icon={faAward} size="2x" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '25px', color: '#CDB7FA' }} />
+            <div>
+            <h5 style={{ fontWeight: 'bold', marginTop: '15px', color: '', textAlign: 'center' }}>Qualification</h5>
           </div>
-          <Card style={{ display: 'flex', alignItems: 'left', width: '50rem', height: '10rem', marginBottom: '10px', border: '1px solid #CDB7FA', boxShadow: 'none', transition: 'transform 0.3s' }}>
-            <CardContent style={{ display: 'flex', gap: '6rem', alignContent: 'center' }} className="hoverEffect">
-              <div style={{ flex: 1 }}>
-                <div className='description'>
-                  <h6 style={{ fontWeight: 'bold' }}>AWS Cloud Practitioner Certificate</h6>
-                  <ul>
-                    <li><FontAwesomeIcon icon={faInstitution} /><span style={{ fontSize: '0.8em' }}>Pearson</span></li>
-                    <li><span style={{ fontSize: '0.8em' }}>2022</span></li>
-                  </ul>
-                </div>
-              </div>
-              <div style={{ flex: 1 }}>
-                <div className='description'>
-                  <h6 style={{ fontWeight: 'bold' }}>Bachelor of Business Administration Honours</h6>
-                  <ul>
-                    <li><span style={{ fontSize: '0.8em' }}>Management College of South Africa</span></li>
-                    <li><span style={{ fontSize: '0.8em' }}>2021</span></li>
-                  </ul>
-                </div>
-              </div>
-              <div style={{ flex: 1 }}>
-                <div className='description'>
-                  <h6 style={{ fontWeight: 'bold' }}>Bachelor of Business Administration Degree</h6>
-                  <ul>
-                    <li><span style={{ fontSize: '0.8em' }}>CIDA City Campus</span></li>
-                    <li><span style={{ fontSize: '0.8em' }}>2013</span></li>
-                  </ul>
-                </div>
-              </div>
+          <div className='description'>
+            <h6 style={{textAlign: 'center'}}>AWS Cloud Practitioner Certificate 2022</h6>
+          </div>
+          <div className='description'>
+            <h6 style={{textAlign: 'center'}} >Bachelor of Business Administration Honours 2022</h6>
+          </div>
             </CardContent>
           </Card>
         </div>
 
-        <div className="experience-card" style={{ display: 'flex', justifyContent: 'center' }}>
-          <Card style={{ display: 'flex', alignItems: 'left', width: '50rem', height: '10rem', marginBottom: '10px',border: '1px solid #CDB7FA', boxShadow: 'none', transition: 'transform 0.3s' }}>
-            <CardContent style={{ display: 'flex', gap: '6rem', alignContent: 'center'}}>
-              <div style={{ flex: 1 }}>
-                <div className='description'>
-                  <h6 style={{ fontWeight: 'bold' }}>Software Developer Intern</h6>
-                  <ul>
-                    <li><span style={{ fontSize: '0.8em' }}>CapaCiti</span></li>
-                    <li><span style={{ fontSize: '0.8em' }}>June 2023-Present</span></li>
-                  </ul>
-                </div>
+        <div className="experience-card" style={{ display: 'flex',flexDirection: 'column', justifyContent: 'center' }}>
+          <Card style={{ display: 'flex',flexDirection: 'column', alignItems: 'right', width: '16rem', height: '15rem', color:'#6e636b' , marginBottom: '20px',border: '1px solid #6e636b',borderRadius:'20px', boxShadow: 'none', transition: 'transform 0.3s' }}>
+            <CardContent style={{ display: 'flex',flexDirection:'column', alignContent: 'center',justifyContent:'center' }} className="hoverEffect">
+            <FontAwesomeIcon icon={faBriefcase} size="2x" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '25px', color: '#CDB7FA' }} />
+              <div>
+              <h5 style={{ fontWeight: 'bold', marginTop: '15px', color: '#6e636b', textAlign: 'center' }}>Experience</h5>
               </div>
-              <div style={{ flex: 1 }}>
                 <div className='description'>
-                  <h6 style={{ fontWeight: 'bold' }}>Universal Banker</h6>
-                  <ul>
-                    <li><span style={{ fontSize: '0.8em' }}>Standard Bank</span></li>
-                    <li><span style={{ fontSize: '0.8em' }}>2022-2023</span></li>
-                  </ul>
+                  <h6 style={{ textAlign:'center' }}>Software Developer Intern 1yr</h6>
                 </div>
-              </div>
-              <div style={{ flex: 1 }}>
+              
+              
                 <div className='description'>
-                  <h6 style={{ fontWeight: 'bold' }}>Cashier</h6>
-                  <ul>
-                    <li><span style={{ fontSize: '0.8em' }}>Mr Price</span></li>
-                    <li><span style={{ fontSize: '0.8em' }}>2013-2015</span></li>
-                  </ul>
+                  <h6 style={{ textAlign:'center' }}>Universal Banker </h6>
                 </div>
-              </div>
+              
+          
             </CardContent>
           </Card>
-          <div>
-            <FontAwesomeIcon icon={faBriefcase} size="4x" style={{ marginLeft: '50px', marginTop: '25px', color: '#CDB7FA' }} />
-            <h5 style={{ fontWeight: 'bold', marginTop: '15px', marginLeft: '50px', color: '#CDB7FA' }}>Experience</h5>
-          </div>
+          
         </div>
 
-        <div className="skills-card" style={{ display: 'flex', justifyContent: 'center' }}>
-          <div>
-            <FontAwesomeIcon icon={faGears} size="4x" style={{ marginRight: '50px', marginTop: '25px', color: '#CDB7FA' }} />
-            <h5 style={{ fontWeight: 'bold', marginTop: '15px', color: '#CDB7FA' }}>Skills</h5>
-          </div>
-          <Card style={{ display: 'flex', alignItems: 'left', width: '50rem', height: '10rem', marginBottom: '10px',border: '1px solid #CDB7FA', boxShadow: 'none', transition: 'transform 0.3s' }}>
-            <CardContent style={{ display: 'flex', gap: '6rem' }}>
-              <div style={{ flex: 1 }}>
-                <div className='description'>
-                  <h6 style={{ fontWeight: 'bold' }}>Front-End Development</h6>
-                  <ul>
-                    <li><span style={{ fontSize: '0.8em' }}>HTML</span></li>
-                    <li><span style={{ fontSize: '0.8em' }}>CSS</span></li>
-                    <li><span style={{ fontSize: '0.8em' }}>Bootstrap</span></li>
-                    <li><span style={{ fontSize: '0.8em' }}>React</span></li>
-                  </ul>
-                </div>
-              </div>
-              <div style={{ flex: 1 }}>
-                <div className='description'>
-                  <h6 style={{ fontWeight: 'bold' }}>Back-End Development</h6>
-                  <ul>
-                    <li><span style={{ fontSize: '0.8em' }}>Node.js</span></li>
-                    <li><span style={{ fontSize: '0.8em' }}>Express.js</span></li>
-                    <li><span style={{ fontSize: '0.8em' }}>MongoDB</span></li>
-                  </ul>
-                </div>
-              </div>
-              <div style={{ flex: 1 }}>
-                <div className='description'>
-                  <h6 style={{ fontWeight: 'bold' }}>Programming Languages</h6>
-                  <ul>
-                    <li><span style={{ fontSize: '0.8em' }}>Python</span></li>
-                    <li><span style={{ fontSize: '0.8em' }}>Java</span></li>
-                    <li><span style={{ fontSize: '0.8em' }}>C++</span></li>
-                  </ul>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
       </div>
+
+      
+      <div className="experience-card" style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+          <Card style={{ display: 'flex',flexDirection: 'column', alignItems: 'center', width: '45rem', height: '6rem', color:'#6e636b' , marginBottom: '20px',border: 'none',borderRadius:'20px', boxShadow: 'none', transition: 'transform 0.3s' }}>
+            <CardContent style={{ gap:'20px',display: 'flex', alignContent: 'center',justifyContent:'center' }} className="hoverEffect">
+           
+                <div className='description'>
+                  <h4 style={{ textAlign: 'center', fontWeight: 'bolder' }}>
+                    <FontAwesomeIcon icon={faBriefcase} style={{ marginRight: '10px',color: '#CDB7FA' }} />
+                     1+
+                  </h4>
+                  <h6>Front-end Development</h6>
+                </div>
+              
+              
+                <div className='description'>
+  <h4 style={{ textAlign: 'center', fontWeight: 'bolder' }}>
+    <FontAwesomeIcon icon={faTasks} style={{ marginRight: '10px',color: '#CDB7FA' }} />
+    5+ 
+  </h4>
+  <h6>Completed Projects</h6>
+</div>
+
+                <div className='description'>
+                  <h4 style={{ textAlign:'center',fontWeight:'bolder'  }}>
+                  <FontAwesomeIcon icon={faPeopleGroup} style={{ marginRight: '10px',color: '#CDB7FA' }} />
+                   
+                    2+ </h4>
+                  <h6>Team Collaboration</h6>
+                </div>
+              
+          
+            </CardContent>
+          </Card>
+          
+        </div>
+          
+      
     </section>
   );
 }

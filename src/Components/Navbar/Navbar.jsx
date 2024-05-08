@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <div className={`navbar ${menuOpen ? 'open' : ''}`}>
-      <img src={Logo} alt="logo" style={{ width: '80px', height: '80px', marginLeft: '50px' }} />
+      <img src={Logo} alt="logo" style={{ width: '80px', height: '80px', marginLeft: '30px', marginTop: '-15px'}} />
 
       <div className={`menu-icon ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
         <div className="bar"></div>

@@ -59,8 +59,8 @@ const ProjectCarousel = () => {
           >
             Don't be shy; take a peek at my work and see what I've been up to!
       </h4>
-      
       </div>
+     
       <div style={{ gridColumn: '2 / 3' }}>
       <Carousel style={{marginTop: '50px'}}>
           {projects.map(project => (
