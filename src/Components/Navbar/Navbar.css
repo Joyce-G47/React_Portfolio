@@ -1,10 +1,17 @@
+/* global.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: linear-gradient(135deg, rgba(127, 39, 156, 1) 0%, rgba(46, 39, 157, 1) 100%);
-  padding: 15px 7%;
+  padding: 15px 0; /* Adjust padding */
   position: fixed;
   z-index: 1;
   width: 100%;
@@ -24,16 +31,13 @@
   cursor: pointer;
   color: aliceblue;
   transition: color 0.3s;
-  padding:5px 10px;
+  padding: 5px 10px;
 }
 
 .menu li:hover {
-  color:#cc39a4;
+  color: #cc39a4;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
- 
-
-
 }
 
 .menu a {
@@ -62,11 +66,10 @@
     flex-direction: column;
     position: absolute;
     top: 60px;
-    left: 75px;
-    width: 80%;
-    background-color: #CDB7FA;
+    left: 0; /* Adjust left position */
+    width: 100%; /* Adjust width */
+    background-color: #cdb7fa;
     text-align: center;
-    margin-top: 34px;
     border-radius: 10%;
   }
 

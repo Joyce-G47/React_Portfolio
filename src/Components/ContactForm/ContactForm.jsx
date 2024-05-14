@@ -73,7 +73,7 @@ function ContactForm() {
         .then((response) => {
           // Move the toast.success call inside the then block
           toast.success("Message sent successfully", {
-            position: "top-right",
+            position: "top-center",
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
@@ -124,17 +124,16 @@ function ContactForm() {
                   I am open to any suggestions or chat about interesting
                   projects that we can work on.
                 </p>
-                <div className="dbox w-100 d-flex align-items-start ">
-                  <div className="icon d-flex align-items-center justify-content-center ">
-                    <span className="fa fa-map-marker"></span>
-                  </div>
-                  <div className="text pl-3">
-                    <p>
-                      <span>Address:</span>A 31 Lower Long St, Foreshore, Cape
-                      Town, 8000
-                    </p>
-                  </div>
-                </div>
+                <div className="dbox w-100 d-flex align-items-start">
+  <div className="icon d-flex align-items-center justify-content-center ml-50">
+    <span className="fa fa-map-marker"></span>
+  </div>
+  <div className="text">
+    <p>
+      <span>Address:</span> A 31 Lower Long St, Foreshore, Cape Town, 8000
+    </p>
+  </div>
+</div>
                 <div className="dbox w-100 d-flex align-items-center">
                   <div className="icon d-flex align-items-center justify-content-center">
                     <span className="fa fa-paper-plane"></span>

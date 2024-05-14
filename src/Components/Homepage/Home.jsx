@@ -49,9 +49,10 @@ const Home = () => {
               style={{ 
                 backgroundColor: '#d62196', 
                 color: 'white', 
+                padding: '0.5rem 0.5rem',
                 paddingLeft: '1rem',  
                 marginLeft: 185, 
-                marginTop: 20,  
+                marginTop: 10,  
                 width: 150,
                 height: 35,
                 transition: 'background-color 0.3s',

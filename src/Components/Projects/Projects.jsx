@@ -45,10 +45,10 @@ const projects = [
 
 const ProjectCarousel = () => {
   return (
-    <section id='projects' style={{ paddingTop: '50px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px',backgroundColor:'#f2f9fa'  }}>
+    <section id='projects' style={{ paddingTop: '50px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px'}}>
 
       <div style={{ gridColumn: '1 / 2' }}>
-        <h3 style={{ fontWeight: 'bold', marginBottom: '30px', color: '#d62196', marginTop: '50px', textAlign: 'center' }}>My latest work</h3>
+        <h3 style={{ fontWeight: 'bold', marginBottom: '30px', color: '#d62196', marginTop: '5rem', textAlign: 'center' }}>My latest work</h3>
       <h4 style={{
         width:'30rem',
         height:'50px',
@@ -65,19 +65,16 @@ const ProjectCarousel = () => {
       <Carousel style={{marginTop: '50px'}}>
           {projects.map(project => (
             <Carousel.Item key={project.id}>
-              <Card style={{backgroundColor:'#f2f9fa',border: 'none', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'}}>
-                <Card.Img variant="top" src={project.image} style={{ width: '100%', height: 'auto'}} />
-                <Card.Body>
-                  <Card.Title>{project.title}</Card.Title>
-                  <Card.Text style={{ fontSize: '16px'}}>
-                    
-                  <FontAwesomeIcon icon={faLaptopCode} style={{color: '#d62196' }} /> {project.faLaptopCode} <br />
-                  <FontAwesomeIcon icon={faLightbulb} style={{color: '#d62196' }} /> {project.faLightbulb} <br />
-                  <FontAwesomeIcon icon={faCalendar} style={{color: '#d62196' }}/> {project.faCalendar}
-
-                    </Card.Text>
-                </Card.Body>
-              </Card>
+             <Card style={{border: 'none', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'}}>
+    <Card.Img variant="top" src={project.image} style={{ width: '30rem', height: 'auto'}} />
+    <Card.Body>
+        <Card.Title>{project.title}</Card.Title>
+        <Card.Text style={{ fontSize: '16px',display:'flex', gap: '10px'}}>
+             <button style={{ backgroundColor: '#d62196', color: 'white', borderRadius: '5px', border: 'none', padding: '10px 20px', marginBottom: '10px'}}>View</button><br/>
+            <button style={{ backgroundColor: '#d62196', color: 'white', borderRadius: '5px', border: 'none', padding: '10px 20px', marginBottom: '10px'}}>Github</button>
+        </Card.Text>
+    </Card.Body>
+</Card>
             </Carousel.Item>
           ))}
         </Carousel>
