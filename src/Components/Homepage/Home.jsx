@@ -20,7 +20,7 @@ const Home = () => {
         </div>
         
         <div className='card-paragraph' style={{ lineHeight: '1.5', fontSize: 'large', color: '#6e636b' , marginTop:'2px'}}>
-          <h2>Hey there, my name is <span style={{ color: '#d62196' }}>Sibongile Gumbi</span></h2><br/>
+          <h2>Hey there, my name is Sibongile Gumbi</h2><br/>
           <p> I am a passionate Software Developer based in vibrant Cape Town, South Africa.
              Let's connect and build something extraordinary together.</p>
         </div>

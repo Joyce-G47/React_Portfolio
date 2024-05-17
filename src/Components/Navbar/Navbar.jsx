@@ -10,27 +10,25 @@ const Navbar = () => {
   };
 
   return (
-    <div className={`navbar ${menuOpen ? 'open' : ''}`}>
-      <img src={Logo} alt="logo" style={{ width: '80px', height: '80px', marginLeft: '30px', marginTop: '-15px'}} />
+    <div className="navbar">
+      <div className="logo" style={{fontSize: '30px', color: '#6e636b', fontWeight:'bolder'}}>S <span style={{ color: '#d62196' }}>Gumbi.</span></div>
 
       <div className={`menu-icon ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
+        <div className="bar" ></div>
+        <div className="bar" ></div>
+        <div className="bar" ></div>
+        
       </div>
 
       <ul className={`menu ${menuOpen ? 'open' : ''}`}>
-        <li style={{ color: 'white' }}><a href="#home" onClick={toggleMenu}>Home</a></li>
-        <li><a href="#about-me" onClick={toggleMenu}>About Me</a></li>
-        <li><a href="#Skills" onClick={toggleMenu}>Skills</a></li>
-        <li><a href="#projects" onClick={toggleMenu}>Projects</a></li>
-        <li><a href="#Contact" onClick={toggleMenu}>Contact</a></li>
+        <li ><a href="#home">Home</a></li>
+        <li ><a href="#about-me">About Me</a></li>
+        <li ><a href="#skills">Skills</a></li>
+        <li ><a href="#projects">Projects</a></li>
+        <li ><a href="#contact">Contact</a></li>
       </ul>
     </div>
   );
 };
 
 export default Navbar;
-
