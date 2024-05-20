@@ -1,2 +1,153 @@
+.about-me-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: right;
+  }
+  
+  .about-me-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 30rem;
+  }
+  
+  .about-me-image-img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .about-job {
+    color: #6e636b;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .qualification-card, .experience-card, .statistics-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 15rem;
+    height: 15rem;
+    color: #6e636b;
+    margin-bottom: 20px;
+    border: 1px solid #6e636b;
+    border-radius: 20px;
+    box-shadow: none;
+    transition: transform 0.3s;
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .card-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    color: #CDB7FA;
+  }
+  
+  .card-title {
+    font-weight: bold;
+    margin-top: 15px;
+    color: #6e636b;
+    text-align: center;
+  }
+  
+  .stats-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45rem;
+    height: 6rem;
+    color: #6e636b;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 80%;
+    box-shadow: none;
+    transition: transform 0.3s;
+    margin-left: 180px;
+  }
+  
+  .stats-card-content {
+    display: flex;
+    gap: 20px;
+    align-content: center;
+    justify-content: center;
+    color: #6e636b;
+  }
+  
+  .stats-title {
+    text-align: center;
+    font-weight: bolder;
+  }
+  
+  .stats-icon {
+    margin-right: 10px;
+    color: #CDB7FA;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .about-me-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-me-image-img {
+      width: 8rem;
+      height: 8rem;
+      
+    }
+  
+    .qualification-card{
+        width:80% ;
+        height: auto;
+        border-radius: 100%;
+        margin-right: -50px;
+        margin-bottom: -10px;
+    }
+    .experience-card{
+      width: 80%;
+      height: auto;
+      margin-right: -50px;
+      margin-bottom: 10px;
+    }
+    
+    .stats-card {
+      width: 68%;
+      height: auto;
+      margin-left: 60px;
+      border: none;
+      margin-bottom: 4px;
+    }
+  
+    .stats-card-content {
 
-
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .card-content, .stats-card-content {
+      align-items: center;
+    }
+  }
+  

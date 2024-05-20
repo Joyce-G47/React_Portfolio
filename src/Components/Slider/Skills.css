@@ -1,20 +1,115 @@
    
-#Skills {
-    overflow: hidden;
-    width: 100vw;
-    max-width: 75rem;
+.skills-cards {
     display: flex;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+  }
+  
+  .skills-card {
+    width: 30rem;
+    height: 5rem;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: none;
+    transition: transform 0.3s;
+  }
+  
+  .skills-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .skills-card-header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  .skills-icon {
+    color: #CDB7FA;
+    margin-right: 10px;
+  }
+  
+  .skills-title {
+    font-weight: bold;
+    margin-top: 15px;
+    color: #6e636b;
     text-align: center;
-    background:#f2f9fa;
-    flex-direction: row;
-    gap: 2rem;
-    padding: 2rem;
-    
-}/*
+  }
+  
+  .skills-select {
+    width: 35rem;
+  }
+  
+  .skills-text {
+    font-size: 0.8em;
+  }
+  
+  .skills-percent {
+    font-size: 0.8em;
+    margin-left: 5px;
+  }
+  
+  .soft-skills {
+    margin-top: 20px;
+  }
+  
+  .soft-skills-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .soft-skills-card {
+    width: 35rem;
+    height: auto;
+    margin-bottom: 10px;
+    border: 1px solid #CDB7FA;
+    border-radius: 20px;
+    box-shadow: none;
+    transition: transform 0.3s;
+  }
+  
+  .soft-skills-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .description {
+    display: flex;
+    flex-direction:row;
+    gap: 10px;
+    margin-top: 5px;
+    text-align: center;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .skills-cards, .soft-skills-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .skills-card, .soft-skills-card {
+      width: 90%;
+    }
+  
+    .skills-select {
+      width: 100%;
+    }
+
+    .description{
+        display:block  
+
+        
+    }
+  }
+  
+/*
 .skillsTopic{
     font-size: large;
     font-weight: bold;

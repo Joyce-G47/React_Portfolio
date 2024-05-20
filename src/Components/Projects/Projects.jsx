@@ -1,87 +1,82 @@
 import React from 'react';
-import { Carousel, Card, Button } from 'react-bootstrap';
-
-
+import { Carousel, Card } from 'react-bootstrap';
 import Rectangle52 from '../../assets/Rectangle 52.png';
 import ToDoList from '../../assets/Rectangle 36.png';
 import BankingApp from '../../assets/Rectangle 43.png';
 import FinancialCalculator from '../../assets/Rectangle 59a.png';
-import { ButtonBase } from '@material-ui/core';
-import { faCalendar, faLaptopCode, faLightbulb } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-
+import './Projects.css';
 
 // Define your project data
 const projects = [
   {
     id: 1,
     title: 'Hlalanathi B&B',
+    description: 'Provide essential information about the bed and breakfast. Showcase unique features and offerings.',
     faLaptopCode: 'HTML, CSS, JavaScript',
     faLightbulb: 'Provide essential information about the bed and breakfast. Showcase unique features and offerings.',
     faCalendar: '2023',
     image: Rectangle52,
+    viewLink: 'file:///C:/Users/sibon/OneDrive/Desktop/Work/Hlalanathi%20B%26B/index.html#home', // Add the link here
+    githubLink: 'https://github.com/your-repo', // Example GitHub link
   },
   {
     id: 2,
     title: 'Banking App',
     description: 'Description of Project 2',
     image: BankingApp,
+    viewLink: 'https://example.com/project2', // Example external link
+    githubLink: 'https://github.com/your-repo',
   },
   {
     id: 3,
     title: 'Financial Calculator',
     description: 'Description of Project 2',
     image: FinancialCalculator,
+    viewLink: 'https://example.com/project3', // Example external link
+    githubLink: 'https://github.com/your-repo',
   },
   {
     id: 4,
     title: 'To-Do List App',
     description: 'Description of Project 2',
     image: ToDoList,
+    viewLink: 'https://example.com/project4', // Example external link
+    githubLink: 'https://github.com/your-repo',
   },
-  
 ];
 
-const ProjectCarousel = () => {
+const Projects = () => {
   return (
-    <section id='projects' style={{ paddingTop: '50px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px'}}>
-
-      <div style={{ gridColumn: '1 / 2' }}>
-        <h3 style={{ fontWeight: 'bold', marginBottom: '30px', color: '#d62196', marginTop: '5rem', textAlign: 'center' }}>My latest work</h3>
-      <h4 style={{
-        width:'30rem',
-        height:'50px',
-        lineHeight: '1.5', 
-        fontSize: 'extralarge', 
-        color: '#6e636b',
-        padding:'40px' }}
-          >
-            Don't be shy; take a peek at my work and see what I've been up to!
-      </h4>
+    <section id='projects' className="projects-section">
+      <div className="projects-info">
+        <h3>My latest work</h3>
+        <h4>Don't be shy; take a peek at my work and see what I've been up to!</h4>
       </div>
-     
-      <div style={{ gridColumn: '2 / 3' }}>
-      <Carousel style={{marginTop: '50px'}}>
+
+      <div className="carousel-container">
+        <Carousel>
           {projects.map(project => (
             <Carousel.Item key={project.id}>
-             <Card style={{border: 'none', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'}}>
-    <Card.Img variant="top" src={project.image} style={{ width: '30rem', height: 'auto'}} />
-    <Card.Body>
-        <Card.Title>{project.title}</Card.Title>
-        <Card.Text style={{ fontSize: '16px',display:'flex', gap: '10px'}}>
-             <button style={{ backgroundColor: '#d62196', color: 'white', borderRadius: '5px', border: 'none', padding: '10px 20px', marginBottom: '10px'}}>View</button><br/>
-            <button style={{ backgroundColor: '#d62196', color: 'white', borderRadius: '5px', border: 'none', padding: '10px 20px', marginBottom: '10px'}}>Github</button>
-        </Card.Text>
-    </Card.Body>
-</Card>
+              <Card className="project-card">
+                <Card.Img variant="top" src={project.image} className="project-image" />
+                <Card.Body>
+                  <Card.Title>{project.title}</Card.Title>
+                  <Card.Text>
+                    <button className="project-button" onClick={() => window.open(project.viewLink, '_blank')}>
+                      View
+                    </button>
+                    <button className="project-button" onClick={() => window.open(project.githubLink, '_blank')}>
+                      Github
+                    </button>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
             </Carousel.Item>
           ))}
         </Carousel>
-    </div>
-    
+      </div>
     </section>
   );
 };
 
-export default ProjectCarousel;
+export default Projects;

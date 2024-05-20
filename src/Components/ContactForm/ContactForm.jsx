@@ -113,7 +113,7 @@ function ContactForm() {
   };
 
   return (
-    <section id="Contact" className="contact-section">
+    <section id="contact" className="contact-section">
       <div className="container1">
         <div className="col-md-10">
           <div className="wrapper">
@@ -255,7 +255,7 @@ function ContactForm() {
                             value="Send Message"
                             className="btn btn-primary"
                           />
-                          {/* <button type="submit" className='btn btn-primary'>Submit</button> */}
+                          
                         </div>
                       </div>
                     </div>
